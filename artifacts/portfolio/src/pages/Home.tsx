@@ -337,17 +337,17 @@ export default function Home() {
             </motion.div>
 
             {/* Main headline — matches reference typography */}
-            <motion.h1 variants={FADE_UP} className="font-display font-black uppercase leading-[0.88] tracking-tight mb-8">
-              <span className="block text-white" style={{ fontSize: "clamp(3.5rem, 12vw, 9rem)" }}>
+            <motion.h1 variants={FADE_UP} className="font-display font-black uppercase leading-[0.9] tracking-tight mb-8">
+              <span className="block text-white" style={{ fontSize: "clamp(2.8rem, 7vw, 5.5rem)" }}>
                 GRAPHIC
               </span>
-              <span className="block text-white" style={{ fontSize: "clamp(3.5rem, 12vw, 9rem)" }}>
+              <span className="block text-white" style={{ fontSize: "clamp(2.8rem, 7vw, 5.5rem)" }}>
                 DESIGNER
               </span>
-              <span className="block text-primary" style={{ fontSize: "clamp(2.8rem, 10vw, 7.5rem)" }}>
+              <span className="block text-primary" style={{ fontSize: "clamp(2.4rem, 6.5vw, 5rem)" }}>
                 FOR BUSINESSES &amp;
               </span>
-              <span className="block text-primary" style={{ fontSize: "clamp(2.8rem, 10vw, 7.5rem)" }}>
+              <span className="block text-primary" style={{ fontSize: "clamp(2.4rem, 6.5vw, 5rem)" }}>
                 BRANDS
               </span>
             </motion.h1>
