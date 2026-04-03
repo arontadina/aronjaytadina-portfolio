@@ -1,0 +1,50 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "5Werk07VyrdHDlxtwewCy"
+uri = "file://artifacts/portfolio/public/hero-bg.png"
+type = "image"
+title = "hero abstract geometric background"
+
+[[generated]]
+id = "rILwlbL8KAS9aUxW9GY4o"
+uri = "file://artifacts/portfolio/public/jersey.png"
+type = "image"
+title = "sports jersey sublimation design"
+
+[[generated]]
+id = "ju1DXUdoneof6h2jEyYiJ"
+uri = "file://artifacts/portfolio/public/logos.png"
+type = "image"
+title = "modern logo design collection"
+
+[[generated]]
+id = "fX3f7_CKmgaaHdzNnGgTN"
+uri = "file://artifacts/portfolio/public/poster.png"
+type = "image"
+title = "campaign poster design"
+
+[[generated]]
+id = "JANII_WPb7Fxdg47JJQWI"
+uri = "file://artifacts/portfolio/public/lanyard.png"
+type = "image"
+title = "id lanyard design mockup"
+
+[[generated]]
+id = "RozwCAC-4wCenpiR_mz6s"
+uri = "file://artifacts/portfolio/public/social.png"
+type = "image"
+title = "social media graphics templates"
+
+[[generated]]
+id = "0nvM65scp_s8vyn0j1jBx"
+uri = "file://artifacts/portfolio/public/tarpaulin.png"
+type = "image"
+title = "graduation tarpaulin banner design"
+
+[[generated]]
+id = "YhNJSgLajBDeG8igmiLfA"
+uri = "file://artifacts/portfolio/public/profile.png"
+type = "image"
+title = "male graphic designer portrait"

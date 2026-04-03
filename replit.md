@@ -16,6 +16,22 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - **API codegen**: Orval (from OpenAPI spec)
 - **Build**: esbuild (CJS bundle)
 
+## Artifacts
+
+### Portfolio Website (`artifacts/portfolio`)
+- **Type**: React + Vite (frontend-only, no backend)
+- **Preview Path**: `/`
+- **Description**: Aron Tadina's professional graphic designer portfolio
+- **Sections**: Hero, Services (8 cards), Software Skills (8 tools with animated progress bars), Portfolio (6 projects with Google Drive links), Why Choose Me, Testimonials, About, Contact
+- **Theme**: Dark black (#0a0a0a), orange (#FF6B00), yellow (#FFD700)
+- **Fonts**: Bebas Neue (headings), Inter (body)
+- **Libraries**: framer-motion (animations), lucide-react (icons)
+- **Images**: Generated AI images in `artifacts/portfolio/public/`
+
+### API Server (`artifacts/api-server`)
+- **Type**: Express 5 API server
+- **Preview Path**: `/api`
+
 ## Key Commands
 
 - `pnpm run typecheck` — full typecheck across all packages
