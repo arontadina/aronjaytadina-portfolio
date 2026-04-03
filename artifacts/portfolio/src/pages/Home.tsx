@@ -24,7 +24,6 @@ const PROJECTS = [
     goal: "Create high-quality, visually dynamic jersey designs that reflect team identity, professionalism, and brand personality.",
     solution: "Designed custom full sublimation layouts with bold color combinations, modern patterns, and detailed graphics optimized for high-quality printing and durability.",
     result: "Delivered standout jersey designs that elevate team presence and reflect brand identity.",
-    link: "https://drive.google.com/drive/folders/1QV4FgOBO8kU4vXfLzol1GMpb4xnCoG6q?usp=drive_link",
     images: [
       "/projects/jersey_12vO0XoJtAZhZaslhCbeJOLMjwfRYvqb6.jpg",
       "/projects/jersey_1bQN4MJge8xla_XQvGl0vBkoiS3YFR7Cd.jpg",
@@ -50,7 +49,6 @@ const PROJECTS = [
     goal: "Create visually striking and meaningful logo designs that represent identity, unity, and purpose.",
     solution: "Developed custom logo layouts using clean typography, symbolic elements, and adaptable design styles suited for school events, teams, and brand identities.",
     result: "Delivered versatile and eye-catching logos that enhance recognition and can be applied across various media.",
-    link: "https://drive.google.com/drive/folders/1W_AganBCNycQaw0ojUBp_Mvavs_0BYHW?usp=drive_link",
     images: [
       "/projects/logo_16FUMMNs_iybTxvSNDxvWcdA-Soy6YRcQ.jpg",
       "/projects/logo_17k_yARM1BmvlnQb0dp3Um_7s1PRY1RzD.jpg",
@@ -76,7 +74,6 @@ const PROJECTS = [
     goal: "Create impactful and persuasive campaign visuals that effectively communicate the candidate's message and connect with voters.",
     solution: "Designed strategic poster layouts using strong typography, compelling imagery, and clear information hierarchy to highlight key platforms and candidate identity.",
     result: "Produced attention-grabbing campaign materials that strengthen candidate visibility and voter appeal.",
-    link: "https://drive.google.com/drive/folders/14XL_0Us4ZnjgepE06rIE9Y4YKYTVWpLg?usp=drive_link",
     images: [
       "/projects/campaign_11UOCUJpeHYtuO5ce-DVlIN2M_R77M5Jt.jpg",
       "/projects/campaign_133jNvoPTAsJWl6fX8aOMGuspeUxPM03Z.jpg",
@@ -101,7 +98,6 @@ const PROJECTS = [
     goal: "Create professional and visually appealing lanyard designs that reflect identity, branding, and functionality.",
     solution: "Designed custom lanyard layouts featuring brand colors, logos, and clean typography, ensuring readability and consistency across all materials while optimizing for print production.",
     result: "Delivered sleek and durable lanyard designs that strengthen organizational identity and professionalism.",
-    link: "https://drive.google.com/drive/folders/1TnOsEW1CtMy4sNeHL8G6my8GlcUd0hDn?usp=drive_link",
     images: [
       "/projects/lanyard_10l7t9Ji6xsGCyjCGlwuaydvsDagFmh9m.jpg",
       "/projects/lanyard_14bZrXBGCHQfIwa7JqkJB84aEc_2ZjFRl.jpg",
@@ -126,7 +122,6 @@ const PROJECTS = [
     goal: "Create engaging and visually consistent social media content that strengthens brand presence and effectively communicates key messages.",
     solution: "Designed cohesive graphic layouts using brand-aligned colors, modern typography, and structured compositions tailored for various platforms.",
     result: "Produced high-quality, scroll-stopping content that increases engagement and brand recognition.",
-    link: "https://drive.google.com/drive/folders/1pE-KaacQs0CmgalZp8PIQyFiOMm4Nm2a?usp=drive_link",
     images: [
       "/projects/social_14GPshanLo7HOoIPhp5dzMccZ1Ba_3fc0.jpg",
       "/projects/social_1OmszSAmSkCPLU297CeqOBe9AbRmndUId.jpg",
@@ -144,7 +139,6 @@ const PROJECTS = [
     goal: "Create visually impactful tarpaulin designs that celebrate achievements and enhance event presentations.",
     solution: "Designed high-resolution layouts with balanced composition, bold typography, and personalized elements, ensuring clarity and quality for large-format printing.",
     result: "Delivered vibrant and professional tarpaulin designs that highlight milestones and create memorable event experiences.",
-    link: "https://drive.google.com/drive/folders/1rveWXk56sBQ_k5Zb8yemp19VJOv6uoRc?usp=drive_link",
     images: [
       "/projects/tarp_14Cfku3BQluGb6ZQZtaBGzy5O02w9-Zfm.jpg",
       "/projects/tarp_1fprZU1TNwvFlNk6QS7WK7GblOvNUnPXh.jpg",
@@ -485,19 +479,9 @@ export default function Home() {
               {PROJECTS.map((project, pi) => (
                 <motion.div key={pi} variants={FADE_UP} className="group">
                   {/* Project header */}
-                  <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 pb-4 border-b border-white/10">
-                    <div>
-                      <span className="text-primary text-xs font-black tracking-[0.3em] uppercase">{project.tag}</span>
-                      <h3 className="text-2xl md:text-3xl font-display font-black uppercase mt-1">{project.title}</h3>
-                    </div>
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-shrink-0 flex items-center gap-2 text-sm font-black tracking-wider uppercase text-white/50 hover:text-primary transition-colors"
-                    >
-                      View in Drive <ExternalLink className="w-4 h-4" />
-                    </a>
+                  <div className="mb-6 pb-4 border-b border-white/10">
+                    <span className="text-primary text-xs font-black tracking-[0.3em] uppercase">{project.tag}</span>
+                    <h3 className="text-2xl md:text-3xl font-display font-black uppercase mt-1">{project.title}</h3>
                   </div>
 
                   {/* Project details */}
@@ -611,7 +595,7 @@ export default function Home() {
             <motion.div variants={FADE_UP} className="w-full lg:w-1/2">
               <div className="relative inline-block w-full max-w-sm mx-auto lg:mx-0">
                 <div className="absolute inset-0 bg-primary translate-x-4 translate-y-4"></div>
-                <img src="/profile.png" alt="Aron Tadina" className="relative z-10 w-full object-cover aspect-[3/4] grayscale hover:grayscale-0 transition-all duration-700" />
+                <img src="/aron-photo.jpg" alt="Aron Tadina" className="relative z-10 w-full object-cover aspect-[3/4]" />
               </div>
             </motion.div>
             <motion.div variants={FADE_UP} className="w-full lg:w-1/2">
