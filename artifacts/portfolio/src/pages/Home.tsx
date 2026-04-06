@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  Menu, X, ExternalLink, Instagram, Linkedin, Mail, Phone, MessageCircle, Star,
+import {
+  Menu, X, Instagram, Linkedin, Mail, Phone, MessageCircle, Star,
   Share2, Calendar, Layout, Smartphone, FileText, Shirt, Megaphone, Image as ImageIcon,
-  Camera, Paintbrush, PenTool, Figma, Monitor, Youtube, ChevronLeft, ChevronRight, ZoomIn
+  Camera, Paintbrush, PenTool, Figma, Monitor, Youtube, ChevronLeft, ChevronRight, ZoomIn,
+  CheckCircle, ArrowRight
 } from "lucide-react";
 
 const FADE_UP = {
@@ -20,10 +21,14 @@ const PROJECTS = [
   {
     tag: "Sublimation Design",
     title: "Full Sublimation Jersey Designs",
-    client: "Students / School Organizations / Companies / Printing Service Owners",
-    goal: "Create high-quality, visually dynamic jersey designs that reflect team identity, professionalism, and brand personality.",
-    solution: "Designed custom full sublimation layouts with bold color combinations, modern patterns, and detailed graphics optimized for high-quality printing and durability.",
-    result: "Delivered standout jersey designs that elevate team presence and reflect brand identity.",
+    client: "Students, school organizations, companies, and printing service owners",
+    goal: "Design visually dynamic full-sublimation jerseys that reflect team identity, professionalism, and brand personality while meeting print-ready production standards.",
+    solution: "Developed custom sublimation layouts with strong structural composition, bold color combinations, and detailed graphics. Each design was built with print accuracy in mind — ensuring color consistency and edge-to-edge quality for large-format production.",
+    result: "Delivered standout jersey designs that elevate team presence, reflect brand identity, and are ready for immediate production.",
+    approach: "Focused on layout structure, color balance, and print-ready accuracy to produce designs that perform as well in production as they do on screen.",
+    tools: ["Adobe Photoshop", "Adobe Illustrator"],
+    featured: true,
+    featuredImage: "/projects/jersey_12vO0XoJtAZhZaslhCbeJOLMjwfRYvqb6.jpg",
     images: [
       "/projects/jersey_12vO0XoJtAZhZaslhCbeJOLMjwfRYvqb6.jpg",
       "/projects/jersey_1bQN4MJge8xla_XQvGl0vBkoiS3YFR7Cd.jpg",
@@ -44,11 +49,15 @@ const PROJECTS = [
   },
   {
     tag: "Branding",
-    title: "Logo Design Layouts",
-    client: "School Organizations / Intramurals / Concept Brands",
-    goal: "Create visually striking and meaningful logo designs that represent identity, unity, and purpose.",
-    solution: "Developed custom logo layouts using clean typography, symbolic elements, and adaptable design styles suited for school events, teams, and brand identities.",
-    result: "Delivered versatile and eye-catching logos that enhance recognition and can be applied across various media.",
+    title: "Logo & Identity Design",
+    client: "School organizations, intramural teams, and concept brands",
+    goal: "Create meaningful, scalable logo designs that communicate identity, unity, and purpose — ready for application across print and digital formats.",
+    solution: "Developed custom logo layouts combining clean typography, symbolic graphic elements, and versatile design styles. Each mark was built to be adaptable — working equally well on jerseys, tarpaulins, social media, and official documents.",
+    result: "Delivered versatile, visually distinct logos that strengthen recognition and hold up across all media.",
+    approach: "Prioritized clarity, scalability, and symbolic meaning — ensuring each logo works at any size and instantly communicates what the organization stands for.",
+    tools: ["Adobe Illustrator", "Adobe Photoshop"],
+    featured: true,
+    featuredImage: "/projects/logo_16FUMMNs_iybTxvSNDxvWcdA-Soy6YRcQ.jpg",
     images: [
       "/projects/logo_16FUMMNs_iybTxvSNDxvWcdA-Soy6YRcQ.jpg",
       "/projects/logo_17k_yARM1BmvlnQb0dp3Um_7s1PRY1RzD.jpg",
@@ -70,10 +79,14 @@ const PROJECTS = [
   {
     tag: "Print & Marketing",
     title: "Campaign Poster Designs",
-    client: "Political Candidates / Campaign Teams / Advocacy Groups",
-    goal: "Create impactful and persuasive campaign visuals that effectively communicate the candidate's message and connect with voters.",
-    solution: "Designed strategic poster layouts using strong typography, compelling imagery, and clear information hierarchy to highlight key platforms and candidate identity.",
-    result: "Produced attention-grabbing campaign materials that strengthen candidate visibility and voter appeal.",
+    client: "Political candidates, campaign teams, and advocacy groups",
+    goal: "Produce persuasive, high-impact campaign visuals that communicate a candidate's message clearly and connect with voters across different demographics.",
+    solution: "Designed strategic poster layouts with strong typographic hierarchy, compelling imagery, and structured information flow. Every element was positioned to guide the viewer's eye and reinforce the candidate's identity and platform.",
+    result: "Produced attention-grabbing campaign materials that strengthen candidate visibility and create a consistent visual presence across print and digital formats.",
+    approach: "Applied strong visual hierarchy and clear information structure to ensure that key messages are understood at a glance — critical for high-traffic public display.",
+    tools: ["Adobe Photoshop", "Adobe Illustrator"],
+    featured: true,
+    featuredImage: "/projects/campaign_1ArUTSOmSwikx9HaYYr61AyPYaDlO2DDE.jpg",
     images: [
       "/projects/campaign_11UOCUJpeHYtuO5ce-DVlIN2M_R77M5Jt.jpg",
       "/projects/campaign_133jNvoPTAsJWl6fX8aOMGuspeUxPM03Z.jpg",
@@ -94,10 +107,14 @@ const PROJECTS = [
   {
     tag: "Merchandise",
     title: "ID Lanyard Designs",
-    client: "Educational Institutions / Corporate Offices / Organizations",
-    goal: "Create professional and visually appealing lanyard designs that reflect identity, branding, and functionality.",
-    solution: "Designed custom lanyard layouts featuring brand colors, logos, and clean typography, ensuring readability and consistency across all materials while optimizing for print production.",
-    result: "Delivered sleek and durable lanyard designs that strengthen organizational identity and professionalism.",
+    client: "Educational institutions, corporate offices, and organizations",
+    goal: "Create professional, branded lanyard designs that reinforce organizational identity and meet functional print production requirements.",
+    solution: "Designed custom lanyard layouts incorporating brand colors, logos, and clean typography. Each design was structured to ensure readability at small scale and visual consistency across all production sizes.",
+    result: "Delivered polished, print-ready lanyard designs that strengthen organizational branding and present a professional image.",
+    approach: "Focused on readability, brand consistency, and production precision — ensuring the designs translate cleanly at the small scale required for lanyard printing.",
+    tools: ["Adobe Illustrator", "Adobe Photoshop"],
+    featured: false,
+    featuredImage: "/projects/lanyard_10l7t9Ji6xsGCyjCGlwuaydvsDagFmh9m.jpg",
     images: [
       "/projects/lanyard_10l7t9Ji6xsGCyjCGlwuaydvsDagFmh9m.jpg",
       "/projects/lanyard_14bZrXBGCHQfIwa7JqkJB84aEc_2ZjFRl.jpg",
@@ -116,12 +133,16 @@ const PROJECTS = [
     ]
   },
   {
-    tag: "Digital Assets",
+    tag: "Social Media",
     title: "Social Media Graphics",
-    client: "Educational Institutions / Corporate Brands / Independent Publications",
-    goal: "Create engaging and visually consistent social media content that strengthens brand presence and effectively communicates key messages.",
-    solution: "Designed cohesive graphic layouts using brand-aligned colors, modern typography, and structured compositions tailored for various platforms.",
-    result: "Produced high-quality, scroll-stopping content that increases engagement and brand recognition.",
+    client: "Educational institutions, corporate brands, and independent publications",
+    goal: "Produce engaging, visually consistent social media content that strengthens brand presence and communicates key messages effectively across platforms.",
+    solution: "Designed cohesive graphic layouts using brand-aligned color palettes, modern typography, and structured visual compositions — tailored for Instagram, Facebook, and other digital platforms.",
+    result: "Produced high-quality, scroll-stopping content that increases audience engagement and reinforces brand recognition.",
+    approach: "Balanced visual appeal with clear messaging — designing for both aesthetic impact and fast readability in a fast-scrolling feed environment.",
+    tools: ["Adobe Photoshop", "Canva", "Adobe Illustrator"],
+    featured: true,
+    featuredImage: "/projects/social_14GPshanLo7HOoIPhp5dzMccZ1Ba_3fc0.jpg",
     images: [
       "/projects/social_14GPshanLo7HOoIPhp5dzMccZ1Ba_3fc0.jpg",
       "/projects/social_1OmszSAmSkCPLU297CeqOBe9AbRmndUId.jpg",
@@ -134,11 +155,15 @@ const PROJECTS = [
   },
   {
     tag: "Event Design",
-    title: "Tarpaulin Layouts for Academic Milestones",
-    client: "Board Passers / Graduating Students / Schools / Event Organizers",
-    goal: "Create visually impactful tarpaulin designs that celebrate achievements and enhance event presentations.",
-    solution: "Designed high-resolution layouts with balanced composition, bold typography, and personalized elements, ensuring clarity and quality for large-format printing.",
-    result: "Delivered vibrant and professional tarpaulin designs that highlight milestones and create memorable event experiences.",
+    title: "Tarpaulin & Event Layout Design",
+    client: "Board passers, graduating students, schools, and event organizers",
+    goal: "Design vibrant, high-resolution tarpaulin layouts that celebrate milestones and create a strong visual presence at events.",
+    solution: "Created large-format layouts with balanced composition, bold typography, and personalized elements. Each design was built at print-ready resolution to ensure sharpness and clarity at full tarpaulin size.",
+    result: "Delivered professional tarpaulin designs that make events memorable and highlight achievements with visual impact.",
+    approach: "Applied large-format design principles — ensuring every element remains clear and impactful at scale, with particular attention to resolution, spacing, and readability from a distance.",
+    tools: ["Adobe Photoshop", "Adobe Illustrator"],
+    featured: false,
+    featuredImage: "/projects/tarp_14Cfku3BQluGb6ZQZtaBGzy5O02w9-Zfm.jpg",
     images: [
       "/projects/tarp_14Cfku3BQluGb6ZQZtaBGzy5O02w9-Zfm.jpg",
       "/projects/tarp_1fprZU1TNwvFlNk6QS7WK7GblOvNUnPXh.jpg",
@@ -149,6 +174,8 @@ const PROJECTS = [
     ]
   }
 ];
+
+const FEATURED = PROJECTS.filter(p => p.featured);
 
 interface LightboxState {
   projectIndex: number;
@@ -193,7 +220,7 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-background text-foreground min-h-screen font-sans selection:bg-primary selection:text-primary-foreground">
+    <div className="bg-[#0a0a0a] text-white min-h-screen font-sans selection:bg-primary selection:text-white">
 
       {/* LIGHTBOX */}
       <AnimatePresence>
@@ -202,23 +229,20 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center"
+            className="fixed inset-0 z-[100] bg-black/96 flex items-center justify-center"
             onClick={() => setLightbox(null)}
           >
-            <button
-              className="absolute top-4 right-4 text-white/70 hover:text-white p-2 z-10"
-              onClick={() => setLightbox(null)}
-            >
+            <button className="absolute top-4 right-4 text-white/60 hover:text-white p-2 z-10" onClick={() => setLightbox(null)}>
               <X className="w-8 h-8" />
             </button>
             <button
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white p-3 bg-white/10 hover:bg-white/20 rounded-full z-10 transition-colors"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-white p-3 bg-white/10 hover:bg-white/20 rounded-full z-10 transition-colors"
               onClick={(e) => { e.stopPropagation(); navigateLightbox(-1); }}
             >
               <ChevronLeft className="w-8 h-8" />
             </button>
             <button
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white p-3 bg-white/10 hover:bg-white/20 rounded-full z-10 transition-colors"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-white p-3 bg-white/10 hover:bg-white/20 rounded-full z-10 transition-colors"
               onClick={(e) => { e.stopPropagation(); navigateLightbox(1); }}
             >
               <ChevronRight className="w-8 h-8" />
@@ -226,15 +250,15 @@ export default function Home() {
             <div className="relative max-w-5xl max-h-[90vh] mx-8" onClick={(e) => e.stopPropagation()}>
               <motion.img
                 key={lightbox.imageIndex}
-                initial={{ opacity: 0, scale: 0.95 }}
+                initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
                 src={PROJECTS[lightbox.projectIndex].images[lightbox.imageIndex]}
                 alt="Project preview"
-                className="max-w-full max-h-[85vh] object-contain rounded"
+                className="max-w-full max-h-[85vh] object-contain"
               />
-              <div className="absolute bottom-0 left-0 right-0 text-center py-2 text-white/50 text-sm">
+              <div className="text-center pt-3 text-white/40 text-sm">
                 {lightbox.imageIndex + 1} / {PROJECTS[lightbox.projectIndex].images.length}
               </div>
             </div>
@@ -243,25 +267,22 @@ export default function Home() {
       </AnimatePresence>
 
       {/* NAVIGATION */}
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0a0a0a]/95 backdrop-blur-md border-b border-white/10 py-4' : 'bg-transparent py-6'}`}>
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0a0a0a]/95 backdrop-blur-md border-b border-white/8 py-4' : 'bg-transparent py-6'}`}>
         <div className="container mx-auto px-6 flex items-center justify-between">
-          <div
-            className="text-xl font-display font-black tracking-widest cursor-pointer uppercase"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          >
-            ARON TADINA<span className="text-primary">.</span>
+          <div className="text-lg font-black tracking-widest cursor-pointer uppercase" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            ARON TADINA<span className="text-[#FF6B00]">.</span>
           </div>
-          <nav className="hidden md:flex gap-8 items-center text-sm font-bold tracking-widest uppercase">
+          <nav className="hidden md:flex gap-8 items-center text-xs font-bold tracking-widest uppercase">
             {['Services', 'Portfolio', 'About', 'Contact'].map((item) => (
-              <button key={item} onClick={() => scrollTo(item.toLowerCase())} className="hover:text-primary transition-colors">
+              <button key={item} onClick={() => scrollTo(item.toLowerCase())} className="text-white/70 hover:text-white transition-colors">
                 {item}
               </button>
             ))}
-            <button onClick={() => scrollTo('contact')} className="bg-primary text-white px-6 py-2 font-black tracking-widest hover:bg-orange-500 transition-colors">
+            <button onClick={() => scrollTo('contact')} className="bg-[#FF6B00] text-white px-5 py-2 font-black tracking-widest text-xs hover:bg-orange-500 transition-colors">
               HIRE ME
             </button>
           </nav>
-          <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <button className="md:hidden text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             {mobileMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
@@ -278,7 +299,7 @@ export default function Home() {
           >
             <nav className="flex flex-col gap-8 text-2xl font-black tracking-widest uppercase">
               {['Services', 'Portfolio', 'About', 'Contact'].map((item) => (
-                <button key={item} onClick={() => scrollTo(item.toLowerCase())} className="text-left hover:text-primary transition-colors border-b border-white/10 pb-6">
+                <button key={item} onClick={() => scrollTo(item.toLowerCase())} className="text-left hover:text-[#FF6B00] transition-colors border-b border-white/10 pb-6">
                   {item}
                 </button>
               ))}
@@ -287,124 +308,152 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      {/* HERO SECTION — matches reference screenshot */}
+      {/* ── HERO ── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Dark geometric background */}
         <div className="absolute inset-0 z-0">
-          <div
-            className="absolute inset-0"
-            style={{
-              background: `
-                radial-gradient(ellipse at 70% 50%, rgba(255,107,0,0.12) 0%, transparent 60%),
-                radial-gradient(ellipse at 30% 80%, rgba(255,107,0,0.06) 0%, transparent 50%),
-                #0a0a0a
-              `
-            }}
-          />
-          {/* Hex/diamond grid overlay */}
-          <svg className="absolute inset-0 w-full h-full opacity-[0.06]" xmlns="http://www.w3.org/2000/svg">
+          <div className="absolute inset-0" style={{ background: `radial-gradient(ellipse at 70% 50%, rgba(255,107,0,0.12) 0%, transparent 60%), radial-gradient(ellipse at 30% 80%, rgba(255,107,0,0.06) 0%, transparent 50%), #0a0a0a` }} />
+          <svg className="absolute inset-0 w-full h-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
                 <path d="M 80 0 L 0 0 0 80" fill="none" stroke="white" strokeWidth="0.5"/>
               </pattern>
-              <pattern id="diag" width="120" height="120" patternUnits="userSpaceOnUse">
-                <line x1="0" y1="0" x2="120" y2="120" stroke="white" strokeWidth="0.5"/>
-                <line x1="120" y1="0" x2="0" y2="120" stroke="white" strokeWidth="0.5"/>
-              </pattern>
             </defs>
             <rect width="100%" height="100%" fill="url(#grid)" />
-            <rect width="100%" height="100%" fill="url(#diag)" opacity="0.5" />
           </svg>
-          {/* Large diagonal accent lines (like in screenshot) */}
-          <svg className="absolute inset-0 w-full h-full opacity-[0.08]" xmlns="http://www.w3.org/2000/svg">
+          <svg className="absolute inset-0 w-full h-full opacity-[0.07]" xmlns="http://www.w3.org/2000/svg">
             <line x1="60%" y1="0%" x2="100%" y2="60%" stroke="#FF6B00" strokeWidth="1.5"/>
             <line x1="55%" y1="0%" x2="100%" y2="70%" stroke="#FF6B00" strokeWidth="0.8"/>
-            <line x1="65%" y1="0%" x2="95%" y2="55%" stroke="white" strokeWidth="0.5"/>
             <line x1="0%" y1="40%" x2="40%" y2="100%" stroke="#FF6B00" strokeWidth="1"/>
-            <line x1="5%" y1="30%" x2="45%" y2="100%" stroke="#FF6B00" strokeWidth="0.5"/>
           </svg>
         </div>
 
-        {/* Hero content — CENTERED like reference */}
-        <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <motion.div initial="hidden" animate="visible" variants={STAGGER}>
-
-            {/* "HI, I'M ARON" badge — exactly as in reference */}
             <motion.div variants={FADE_UP} className="flex justify-center mb-6">
-              <span className="inline-block border border-primary text-primary text-xs font-black tracking-[0.3em] uppercase px-4 py-2 bg-primary/10">
+              <span className="inline-block border border-[#FF6B00] text-[#FF6B00] text-xs font-black tracking-[0.3em] uppercase px-4 py-2 bg-[#FF6B00]/10">
                 HI, I'M ARON
               </span>
             </motion.div>
 
-            {/* Main headline — matches reference typography */}
-            <motion.h1 variants={FADE_UP} className="font-display font-black uppercase leading-[0.9] tracking-tight mb-8">
-              <span className="block text-white" style={{ fontSize: "clamp(2.8rem, 7vw, 5.5rem)" }}>
-                GRAPHIC
-              </span>
-              <span className="block text-white" style={{ fontSize: "clamp(2.8rem, 7vw, 5.5rem)" }}>
-                DESIGNER
-              </span>
-              <span className="block text-primary" style={{ fontSize: "clamp(2.4rem, 6.5vw, 5rem)" }}>
-                FOR BUSINESSES &amp;
-              </span>
-              <span className="block text-primary" style={{ fontSize: "clamp(2.4rem, 6.5vw, 5rem)" }}>
-                BRANDS
-              </span>
+            <motion.h1 variants={FADE_UP} className="font-black uppercase leading-[0.9] tracking-tight mb-6">
+              <span className="block text-white" style={{ fontSize: "clamp(2.8rem, 7vw, 5.5rem)" }}>GRAPHIC</span>
+              <span className="block text-white" style={{ fontSize: "clamp(2.8rem, 7vw, 5.5rem)" }}>DESIGNER</span>
+              <span className="block text-[#FF6B00]" style={{ fontSize: "clamp(2.4rem, 6.5vw, 5rem)" }}>FOR BUSINESSES &amp;</span>
+              <span className="block text-[#FF6B00]" style={{ fontSize: "clamp(2.4rem, 6.5vw, 5rem)" }}>BRANDS</span>
             </motion.h1>
 
-            {/* Subtitle — centered, muted gray */}
-            <motion.p variants={FADE_UP} className="text-white/50 text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed font-medium">
-              I create clean, high-impact designs that help businesses stand out,
-              attract customers, and grow their brand.
+            {/* Positioning statement */}
+            <motion.p variants={FADE_UP} className="text-white/40 text-sm font-semibold tracking-widest uppercase mb-4">
+              Freelance Graphic Designer · Branding · Social Media · Print Design
             </motion.p>
 
-            {/* CTA buttons — exactly matching reference */}
+            <motion.p variants={FADE_UP} className="text-white/55 text-base md:text-lg max-w-lg mx-auto mb-10 leading-relaxed">
+              Creating professional designs for branding, social media, and print materials.
+            </motion.p>
+
             <motion.div variants={FADE_UP} className="flex flex-wrap items-center justify-center gap-4">
-              <button
-                onClick={() => scrollTo('portfolio')}
-                className="flex items-center gap-3 bg-primary text-white px-8 py-4 font-black tracking-widest text-sm uppercase hover:bg-orange-500 transition-colors"
-              >
-                VIEW MY WORK <span className="text-lg">&#8594;</span>
+              <button onClick={() => scrollTo('portfolio')} className="flex items-center gap-3 bg-[#FF6B00] text-white px-8 py-4 font-black tracking-widest text-xs uppercase hover:bg-orange-500 transition-colors">
+                VIEW MY WORK <ArrowRight className="w-4 h-4" />
               </button>
-              <button
-                onClick={() => scrollTo('contact')}
-                className="px-8 py-4 font-black tracking-widest text-sm uppercase border border-white/30 text-white hover:border-primary hover:text-primary transition-colors bg-transparent"
-              >
-                HIRE ME
+              <button onClick={() => scrollTo('contact')} className="px-8 py-4 font-black tracking-widest text-xs uppercase border border-white/25 text-white hover:border-[#FF6B00] hover:text-[#FF6B00] transition-colors">
+                CONTACT ME
               </button>
             </motion.div>
-
           </motion.div>
         </div>
       </section>
 
-      {/* SERVICES SECTION */}
-      <section id="services" className="py-32 bg-[#111111]">
+      {/* ── INTRO STRIP ── */}
+      <section className="py-16 bg-[#111111] border-y border-white/5">
+        <div className="container mx-auto px-6 text-center max-w-3xl">
+          <motion.p
+            initial="hidden" whileInView="visible" viewport={{ once: true }}
+            variants={FADE_UP}
+            className="text-white/60 text-base md:text-lg leading-relaxed"
+          >
+            I design visual materials that help brands and organizations communicate clearly and effectively
+            across digital and print platforms — from logos and social media to jerseys, tarpaulins, and marketing campaigns.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* ── FEATURED WORK ── */}
+      <section className="py-24 bg-[#0a0a0a]">
         <div className="container mx-auto px-6">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={STAGGER}>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={STAGGER}>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+              <div>
+                <motion.p variants={FADE_UP} className="text-[#FF6B00] text-xs font-black tracking-[0.3em] uppercase mb-3">FEATURED WORK</motion.p>
+                <motion.h2 variants={FADE_UP} className="text-3xl md:text-5xl font-black uppercase">
+                  Best Projects
+                </motion.h2>
+              </div>
+              <motion.button variants={FADE_UP} onClick={() => scrollTo('portfolio')} className="flex items-center gap-2 text-xs font-black tracking-widest uppercase text-white/40 hover:text-[#FF6B00] transition-colors flex-shrink-0">
+                SEE ALL WORK <ArrowRight className="w-4 h-4" />
+              </motion.button>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {FEATURED.map((project, i) => {
+                const pi = PROJECTS.indexOf(project);
+                return (
+                  <motion.button
+                    key={i}
+                    variants={FADE_UP}
+                    className="group relative overflow-hidden bg-white/5 text-left"
+                    onClick={() => { scrollTo('portfolio'); }}
+                  >
+                    <div className="aspect-square overflow-hidden">
+                      <img
+                        src={project.featuredImage}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                      <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-1">{project.tag}</span>
+                      <span className="text-white text-sm font-bold leading-tight block">{project.title}</span>
+                    </div>
+                    <div className="absolute top-3 right-3 bg-[#FF6B00] p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <ZoomIn className="w-3 h-3 text-white" />
+                    </div>
+                  </motion.button>
+                );
+              })}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── SERVICES ── */}
+      <section id="services" className="py-28 bg-[#111111]">
+        <div className="container mx-auto px-6">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={STAGGER}>
             <div className="text-center mb-16">
-              <motion.p variants={FADE_UP} className="text-primary text-sm font-black tracking-[0.3em] uppercase mb-4">WHAT I OFFER</motion.p>
-              <motion.h2 variants={FADE_UP} className="text-4xl md:text-6xl font-display font-black uppercase mb-4">
-                What I Can Do <span className="text-primary">For You</span>
+              <motion.p variants={FADE_UP} className="text-[#FF6B00] text-xs font-black tracking-[0.3em] uppercase mb-4">WHAT I OFFER</motion.p>
+              <motion.h2 variants={FADE_UP} className="text-3xl md:text-5xl font-black uppercase mb-4">
+                Services I <span className="text-[#FF6B00]">Offer</span>
               </motion.h2>
-              <motion.p variants={FADE_UP} className="text-white/40 text-lg max-w-xl mx-auto">
-                Designs tailored to elevate your brand and connect with your audience.
+              <motion.p variants={FADE_UP} className="text-white/40 text-base max-w-lg mx-auto">
+                Professional design services for organizations, businesses, and individuals — built to communicate, convert, and impress.
               </motion.p>
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5">
               {[
-                { title: "Social Media Graphics", desc: "Eye-catching posts, stories, and templates for Instagram, Facebook, and more.", icon: <Share2 className="w-7 h-7" /> },
-                { title: "Event Design", desc: "Posters, banners, invitations, and event materials that make an impact.", icon: <Calendar className="w-7 h-7" /> },
-                { title: "Branding Design", desc: "Complete brand identities — logos, color systems, and visual guidelines.", icon: <Layout className="w-7 h-7" /> },
-                { title: "Web & UI Graphics", desc: "Clean, modern graphics and UI assets optimized for digital platforms.", icon: <Smartphone className="w-7 h-7" /> },
-                { title: "Publication Materials", desc: "Newsletters, brochures, magazines, and formatted editorial layouts.", icon: <FileText className="w-7 h-7" /> },
-                { title: "Print & Merchandise", desc: "Apparel graphics, sublimation layouts, tees, hoodies, and full merch drops.", icon: <Shirt className="w-7 h-7" /> },
-                { title: "Marketing Materials", desc: "Flyers, ads, and campaign visuals that drive attention and conversions.", icon: <Megaphone className="w-7 h-7" /> },
-                { title: "Photo Editing", desc: "Professional photo retouching, compositing, and polished layout designs.", icon: <ImageIcon className="w-7 h-7" /> },
+                { title: "Social Media Graphics", desc: "Scroll-stopping posts, stories, and templates for Instagram, Facebook, and more — aligned with your brand.", icon: <Share2 className="w-6 h-6" /> },
+                { title: "Logo & Branding Design", desc: "Distinctive logos and brand identities that communicate who you are and scale across all media.", icon: <Layout className="w-6 h-6" /> },
+                { title: "Campaign & Event Posters", desc: "High-impact poster and banner designs for campaigns, events, and advocacy — built to be seen.", icon: <Megaphone className="w-6 h-6" /> },
+                { title: "Tarpaulin & Layout Design", desc: "Print-ready large-format layouts for events, milestones, and organizational displays.", icon: <Calendar className="w-6 h-6" /> },
+                { title: "Apparel & Merchandise", desc: "Custom full sublimation jersey designs, apparel graphics, and merchandise layouts built for production.", icon: <Shirt className="w-6 h-6" /> },
+                { title: "Marketing Materials", desc: "Flyers, ads, brochures, and campaign visuals that drive attention and move people to action.", icon: <FileText className="w-6 h-6" /> },
+                { title: "Photo Editing", desc: "Professional retouching, compositing, and layout finishing for polished, presentation-ready results.", icon: <ImageIcon className="w-6 h-6" /> },
+                { title: "Print Design", desc: "ID lanyards, newsletters, publications, and any format that needs clean, print-ready design.", icon: <Smartphone className="w-6 h-6" /> },
               ].map((service, i) => (
-                <motion.div key={i} variants={FADE_UP} className="bg-[#0a0a0a] p-8 group hover:bg-primary/5 transition-colors border-t-2 border-transparent hover:border-primary">
-                  <div className="text-primary mb-6">{service.icon}</div>
-                  <h3 className="text-base font-black uppercase tracking-wide mb-3">{service.title}</h3>
+                <motion.div key={i} variants={FADE_UP} className="bg-[#0a0a0a] p-7 group hover:bg-[#FF6B00]/5 transition-colors border-t-2 border-transparent hover:border-[#FF6B00]">
+                  <div className="text-[#FF6B00] mb-5">{service.icon}</div>
+                  <h3 className="text-sm font-black uppercase tracking-wide mb-3 text-white">{service.title}</h3>
                   <p className="text-white/40 text-sm leading-relaxed">{service.desc}</p>
                 </motion.div>
               ))}
@@ -413,17 +462,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SKILLS SECTION */}
-      <section id="skills" className="py-32 bg-[#0a0a0a]">
-        <div className="container mx-auto px-6">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={STAGGER} className="max-w-4xl mx-auto">
+      {/* ── TOOLS / SKILLS ── */}
+      <section id="skills" className="py-28 bg-[#0a0a0a]">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={STAGGER}>
             <div className="text-center mb-16">
-              <motion.p variants={FADE_UP} className="text-primary text-sm font-black tracking-[0.3em] uppercase mb-4">EXPERTISE</motion.p>
-              <motion.h2 variants={FADE_UP} className="text-4xl md:text-6xl font-display font-black uppercase mb-4">
-                Tools <span className="text-primary">I Use</span>
+              <motion.p variants={FADE_UP} className="text-[#FF6B00] text-xs font-black tracking-[0.3em] uppercase mb-4">EXPERTISE</motion.p>
+              <motion.h2 variants={FADE_UP} className="text-3xl md:text-5xl font-black uppercase mb-4">
+                Tools <span className="text-[#FF6B00]">I Use</span>
               </motion.h2>
-              <motion.p variants={FADE_UP} className="text-white/40 text-lg">
-                Industry-standard software to bring ideas to life.
+              <motion.p variants={FADE_UP} className="text-white/40 text-base">
+                Industry-standard software used across every project.
               </motion.p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8">
@@ -437,17 +486,17 @@ export default function Home() {
                 { name: "Microsoft Power BI", percent: 50, icon: <Monitor className="text-[#F2C811] w-5 h-5" /> },
                 { name: "Adobe After Effects", percent: 30, icon: <Youtube className="text-[#9999FF] w-5 h-5" /> },
               ].map((skill, i) => (
-                <motion.div key={i} variants={FADE_UP} className="mb-2">
+                <motion.div key={i} variants={FADE_UP}>
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-3">
                       {skill.icon}
-                      <span className="font-bold tracking-wide text-sm uppercase">{skill.name}</span>
+                      <span className="font-bold text-sm">{skill.name}</span>
                     </div>
-                    <span className="text-primary font-black text-sm">{skill.percent}%</span>
+                    <span className="text-[#FF6B00] font-black text-sm">{skill.percent}%</span>
                   </div>
-                  <div className="h-1.5 w-full bg-white/10 overflow-hidden">
+                  <div className="h-1.5 w-full bg-white/8 overflow-hidden">
                     <motion.div
-                      className="h-full bg-primary"
+                      className="h-full bg-[#FF6B00]"
                       initial={{ width: 0 }}
                       whileInView={{ width: `${skill.percent}%` }}
                       transition={{ duration: 1.2, ease: "easeOut", delay: i * 0.05 }}
@@ -461,65 +510,93 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PORTFOLIO SECTION — with real images + lightbox */}
-      <section id="portfolio" className="py-32 bg-[#111111]">
+      {/* ── PORTFOLIO ── */}
+      <section id="portfolio" className="py-28 bg-[#111111]">
         <div className="container mx-auto px-6">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={STAGGER}>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={STAGGER}>
             <div className="text-center mb-16">
-              <motion.p variants={FADE_UP} className="text-primary text-sm font-black tracking-[0.3em] uppercase mb-4">PORTFOLIO</motion.p>
-              <motion.h2 variants={FADE_UP} className="text-4xl md:text-6xl font-display font-black uppercase mb-4">
-                Selected <span className="text-primary">Work</span>
+              <motion.p variants={FADE_UP} className="text-[#FF6B00] text-xs font-black tracking-[0.3em] uppercase mb-4">PORTFOLIO</motion.p>
+              <motion.h2 variants={FADE_UP} className="text-3xl md:text-5xl font-black uppercase mb-4">
+                All <span className="text-[#FF6B00]">Projects</span>
               </motion.h2>
-              <motion.p variants={FADE_UP} className="text-white/40 text-lg max-w-xl mx-auto">
-                A curated collection of real client projects across various design disciplines.
+              <motion.p variants={FADE_UP} className="text-white/40 text-base max-w-lg mx-auto">
+                A curated collection of real client and organizational projects across branding, print, digital, and event design.
               </motion.p>
             </div>
 
-            <div className="space-y-24">
+            <div className="space-y-20">
               {PROJECTS.map((project, pi) => (
-                <motion.div key={pi} variants={FADE_UP} className="group">
-                  {/* Project header */}
-                  <div className="mb-6 pb-4 border-b border-white/10">
-                    <span className="text-primary text-xs font-black tracking-[0.3em] uppercase">{project.tag}</span>
-                    <h3 className="text-2xl md:text-3xl font-display font-black uppercase mt-1">{project.title}</h3>
+                <motion.div
+                  key={pi}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-60px" }}
+                  variants={STAGGER}
+                  className="border border-white/5 bg-[#0a0a0a]"
+                >
+                  {/* Project header bar */}
+                  <div className="flex flex-col md:flex-row md:items-center gap-3 p-6 border-b border-white/5">
+                    <span className="text-[#FF6B00] text-xs font-black tracking-[0.25em] uppercase">{project.tag}</span>
+                    <span className="hidden md:block text-white/20">·</span>
+                    <h3 className="text-lg md:text-xl font-black uppercase text-white">{project.title}</h3>
                   </div>
 
-                  {/* Project details */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-sm">
-                    <div>
-                      <span className="text-primary font-black uppercase tracking-wider text-xs block mb-1">Client</span>
-                      <p className="text-white/50 leading-relaxed">{project.client}</p>
-                    </div>
-                    <div>
-                      <span className="text-primary font-black uppercase tracking-wider text-xs block mb-1">Goal & Solution</span>
-                      <p className="text-white/50 leading-relaxed">{project.goal}</p>
-                    </div>
-                    <div>
-                      <span className="text-primary font-black uppercase tracking-wider text-xs block mb-1">Result</span>
-                      <p className="text-white/50 leading-relaxed">{project.result}</p>
-                    </div>
-                  </div>
-
-                  {/* Image grid — click to open lightbox */}
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
-                    {project.images.map((img, ii) => (
-                      <motion.button
-                        key={ii}
-                        whileHover={{ scale: 1.02 }}
-                        className="relative aspect-square overflow-hidden bg-white/5 group/img cursor-pointer"
-                        onClick={() => setLightbox({ projectIndex: pi, imageIndex: ii })}
-                      >
-                        <img
-                          src={img}
-                          alt={`${project.title} ${ii + 1}`}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
-                          loading="lazy"
-                        />
-                        <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/40 transition-colors flex items-center justify-center">
-                          <ZoomIn className="w-6 h-6 text-white opacity-0 group-hover/img:opacity-100 transition-opacity" />
+                  <div className="p-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    {/* Left: case study details */}
+                    <div className="lg:col-span-1 space-y-6">
+                      <div>
+                        <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">Client</span>
+                        <p className="text-white/55 text-sm leading-relaxed">{project.client}</p>
+                      </div>
+                      <div>
+                        <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">Goal</span>
+                        <p className="text-white/55 text-sm leading-relaxed">{project.goal}</p>
+                      </div>
+                      <div>
+                        <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">Solution</span>
+                        <p className="text-white/55 text-sm leading-relaxed">{project.solution}</p>
+                      </div>
+                      <div>
+                        <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">Result</span>
+                        <p className="text-white/55 text-sm leading-relaxed">{project.result}</p>
+                      </div>
+                      <div>
+                        <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">Design Approach</span>
+                        <p className="text-white/55 text-sm leading-relaxed">{project.approach}</p>
+                      </div>
+                      <div>
+                        <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">Tools Used</span>
+                        <div className="flex flex-wrap gap-2">
+                          {project.tools.map((tool, ti) => (
+                            <span key={ti} className="text-xs font-bold text-white/60 bg-white/5 border border-white/10 px-2 py-1">{tool}</span>
+                          ))}
                         </div>
-                      </motion.button>
-                    ))}
+                      </div>
+                    </div>
+
+                    {/* Right: image grid */}
+                    <div className="lg:col-span-2">
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                        {project.images.map((img, ii) => (
+                          <motion.button
+                            key={ii}
+                            whileHover={{ scale: 1.02 }}
+                            className="relative aspect-square overflow-hidden bg-white/5 group/img cursor-pointer"
+                            onClick={() => setLightbox({ projectIndex: pi, imageIndex: ii })}
+                          >
+                            <img
+                              src={img}
+                              alt={`${project.title} ${ii + 1}`}
+                              className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
+                              loading="lazy"
+                            />
+                            <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/50 transition-colors flex items-center justify-center">
+                              <ZoomIn className="w-5 h-5 text-white opacity-0 group-hover/img:opacity-100 transition-opacity" />
+                            </div>
+                          </motion.button>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -528,26 +605,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHY CHOOSE ME */}
-      <section className="py-24 bg-primary overflow-hidden relative">
-        <div className="absolute inset-0 opacity-10 bg-[repeating-linear-gradient(45deg,transparent,transparent_20px,rgba(0,0,0,0.3)_20px,rgba(0,0,0,0.3)_21px)]"></div>
+      {/* ── WHY CHOOSE ME ── */}
+      <section className="py-20 bg-[#FF6B00] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 bg-[repeating-linear-gradient(45deg,transparent,transparent_20px,rgba(0,0,0,0.3)_20px,rgba(0,0,0,0.3)_21px)]" />
         <div className="container mx-auto px-6 relative z-10">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={STAGGER} className="flex flex-col lg:flex-row items-center justify-between gap-12">
-            <motion.div variants={FADE_UP} className="lg:w-1/3 text-center lg:text-left">
-              <h2 className="text-4xl md:text-6xl font-display font-black uppercase leading-none text-white">
-                Why<br/>Choose<br/>Me?
-              </h2>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={STAGGER} className="flex flex-col lg:flex-row items-center justify-between gap-12">
+            <motion.div variants={FADE_UP} className="lg:w-1/3">
+              <h2 className="text-3xl md:text-5xl font-black uppercase text-white leading-none">Why<br/>Choose<br/>Me?</h2>
             </motion.div>
             <motion.div variants={FADE_UP} className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
               {[
                 "Fast and reliable delivery",
                 "Creative and detail-oriented approach",
                 "Designs strictly tailored to your brand",
-                "Easy and transparent communication"
+                "Easy and transparent communication",
+                "Experience in print-ready design",
+                "Multiple academic and organizational projects completed"
               ].map((point, i) => (
-                <div key={i} className="flex items-center gap-4 p-6 bg-black/20 border border-white/10">
+                <div key={i} className="flex items-center gap-4 p-5 bg-black/15 border border-white/10">
                   <div className="w-2 h-2 bg-white flex-shrink-0" />
-                  <p className="font-black text-base uppercase tracking-wide text-white">{point}</p>
+                  <p className="font-bold text-sm uppercase tracking-wide text-white">{point}</p>
                 </div>
               ))}
             </motion.div>
@@ -555,31 +632,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
-      <section id="testimonials" className="py-32 bg-[#0a0a0a]">
+      {/* ── TESTIMONIALS ── */}
+      <section id="testimonials" className="py-28 bg-[#0a0a0a]">
         <div className="container mx-auto px-6">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={STAGGER}>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={STAGGER}>
             <div className="text-center mb-16">
-              <motion.p variants={FADE_UP} className="text-primary text-sm font-black tracking-[0.3em] uppercase mb-4">TESTIMONIALS</motion.p>
-              <motion.h2 variants={FADE_UP} className="text-4xl md:text-6xl font-display font-black uppercase">
-                What Clients <span className="text-primary">Say</span>
+              <motion.p variants={FADE_UP} className="text-[#FF6B00] text-xs font-black tracking-[0.3em] uppercase mb-4">TESTIMONIALS</motion.p>
+              <motion.h2 variants={FADE_UP} className="text-3xl md:text-5xl font-black uppercase">
+                What Clients <span className="text-[#FF6B00]">Say</span>
               </motion.h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { text: "Very easy to work with and delivers high-quality designs.", author: "Alex R.", role: "Small Business Owner" },
-                { text: "Creative, fast, and understands exactly what I need.", author: "Maria L.", role: "Student" },
-                { text: "His designs helped my brand get noticed online.", author: "James T.", role: "Full Sublimation & Printing Services Owner" },
+                { text: "Very easy to work with and delivers high-quality designs every time.", author: "Alex R.", role: "Small Business Owner" },
+                { text: "Creative, fast, and always understands exactly what I need — highly recommend.", author: "Maria L.", role: "Student" },
+                { text: "His designs helped my brand get noticed. Professional quality at every step.", author: "James T.", role: "Printing Services Owner" },
               ].map((test, i) => (
-                <motion.div key={i} variants={FADE_UP} className="bg-[#111111] border border-white/5 p-8 relative hover:border-primary/30 transition-colors">
-                  <div className="text-primary text-6xl font-serif absolute top-2 left-6 opacity-30 leading-none">"</div>
-                  <div className="flex gap-1 mb-6 text-primary">
+                <motion.div key={i} variants={FADE_UP} className="bg-[#111111] border border-white/5 p-8 relative hover:border-[#FF6B00]/30 transition-colors">
+                  <div className="text-[#FF6B00] text-6xl font-serif absolute top-2 left-5 opacity-25 leading-none">"</div>
+                  <div className="flex gap-1 mb-5 text-[#FF6B00]">
                     {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-current" />)}
                   </div>
-                  <p className="text-white/70 text-base mb-8 italic leading-relaxed">"{test.text}"</p>
-                  <div className="border-t border-white/10 pt-4">
+                  <p className="text-white/65 text-base mb-7 italic leading-relaxed">"{test.text}"</p>
+                  <div className="border-t border-white/8 pt-4">
                     <p className="font-black text-sm uppercase tracking-wider">{test.author}</p>
-                    <p className="text-xs text-white/40 mt-1">{test.role}</p>
+                    <p className="text-xs text-white/35 mt-1">{test.role}</p>
                   </div>
                 </motion.div>
               ))}
@@ -588,79 +665,104 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT ME */}
-      <section id="about" className="py-32 bg-[#111111] border-t border-white/5">
+      {/* ── ABOUT ── */}
+      <section id="about" className="py-28 bg-[#111111] border-t border-white/5">
         <div className="container mx-auto px-6">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={STAGGER} className="flex flex-col lg:flex-row items-center gap-16">
-            <motion.div variants={FADE_UP} className="w-full lg:w-1/2">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={STAGGER} className="flex flex-col lg:flex-row items-start gap-16">
+
+            {/* Photo */}
+            <motion.div variants={FADE_UP} className="w-full lg:w-2/5 flex-shrink-0">
               <div className="relative inline-block w-full max-w-sm mx-auto lg:mx-0">
-                <div className="absolute inset-0 bg-primary translate-x-4 translate-y-4"></div>
+                <div className="absolute inset-0 bg-[#FF6B00] translate-x-4 translate-y-4" />
                 <img src="/aron-photo.jpg" alt="Aron Tadina" className="relative z-10 w-full object-cover aspect-[3/4]" />
               </div>
             </motion.div>
-            <motion.div variants={FADE_UP} className="w-full lg:w-1/2">
-              <p className="text-primary text-sm font-black tracking-[0.3em] uppercase mb-4">ABOUT ME</p>
-              <h2 className="text-4xl md:text-6xl font-display font-black uppercase mb-8">
-                Aron <span className="text-primary">Tadina</span>
+
+            {/* Text */}
+            <motion.div variants={FADE_UP} className="w-full lg:w-3/5">
+              <p className="text-[#FF6B00] text-xs font-black tracking-[0.3em] uppercase mb-4">ABOUT ME</p>
+              <h2 className="text-3xl md:text-5xl font-black uppercase mb-8">
+                Aron <span className="text-[#FF6B00]">Tadina</span>
               </h2>
-              <div className="space-y-5 text-base text-white/50 leading-relaxed">
-                <p>I'm Aron, a freelance graphic designer passionate about creating visually compelling designs that communicate ideas effectively.</p>
-                <p>I specialize in modern, clean, and streetwear-inspired visuals that help brands stand out in a competitive market.</p>
-                <p>I focus on delivering designs that are not only visually appealing but also purposeful and aligned with client goals.</p>
+
+              <div className="space-y-4 text-white/60 text-base leading-relaxed mb-10">
+                <p>
+                  I'm Aron, a freelance graphic designer with experience creating a wide range of visual materials including branding, social media graphics, event layouts, and print designs.
+                </p>
+                <p>
+                  I focus on producing clean, well-structured, and visually effective designs that meet both aesthetic and functional requirements. My approach combines creativity with attention to detail to ensure each design communicates clearly and professionally.
+                </p>
+                <p>
+                  I've worked on multiple academic and organizational projects, building experience in print-ready design, large-format layouts, and brand identity work.
+                </p>
               </div>
-              <button
-                onClick={() => scrollTo('contact')}
-                className="mt-10 flex items-center gap-3 bg-primary text-white px-8 py-4 font-black tracking-widest text-sm uppercase hover:bg-orange-500 transition-colors"
-              >
-                WORK WITH ME <span>&#8594;</span>
+
+              {/* What I Do Best */}
+              <div className="mb-10">
+                <h3 className="text-sm font-black uppercase tracking-widest text-white mb-5">What I Do Best</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {[
+                    "Branding & Logo Design",
+                    "Social Media Graphics",
+                    "Event & Tarpaulin Layouts",
+                    "Print & Marketing Materials",
+                    "Apparel & Merchandise Design",
+                    "Campaign Poster Design",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <CheckCircle className="w-4 h-4 text-[#FF6B00] flex-shrink-0" />
+                      <span className="text-sm text-white/65 font-medium">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <button onClick={() => scrollTo('contact')} className="flex items-center gap-3 bg-[#FF6B00] text-white px-8 py-4 font-black tracking-widest text-xs uppercase hover:bg-orange-500 transition-colors">
+                WORK WITH ME <ArrowRight className="w-4 h-4" />
               </button>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section id="contact" className="py-32 bg-[#0a0a0a]">
+      {/* ── CONTACT ── */}
+      <section id="contact" className="py-28 bg-[#0a0a0a]">
         <div className="container mx-auto px-6">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={STAGGER}>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={STAGGER}>
             <div className="text-center mb-16">
-              <motion.p variants={FADE_UP} className="text-primary text-sm font-black tracking-[0.3em] uppercase mb-4">GET IN TOUCH</motion.p>
-              <motion.h2 variants={FADE_UP} className="text-4xl md:text-6xl font-display font-black uppercase mb-4">
-                Let's Work <span className="text-primary">Together</span>
+              <motion.p variants={FADE_UP} className="text-[#FF6B00] text-xs font-black tracking-[0.3em] uppercase mb-4">GET IN TOUCH</motion.p>
+              <motion.h2 variants={FADE_UP} className="text-3xl md:text-5xl font-black uppercase mb-4">
+                Let's Work <span className="text-[#FF6B00]">Together</span>
               </motion.h2>
-              <motion.p variants={FADE_UP} className="text-white/40 text-lg max-w-xl mx-auto">
-                Ready to elevate your brand? Let's create something great together.
+              <motion.p variants={FADE_UP} className="text-white/45 text-base max-w-md mx-auto">
+                I'm available for freelance projects. Feel free to reach out for collaborations or design work.
               </motion.p>
             </div>
 
             <div className="max-w-2xl mx-auto">
-              <motion.div variants={FADE_UP} className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+              <motion.div variants={FADE_UP} className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-10">
                 {[
-                  { icon: <Mail className="w-5 h-5" />, label: "Email", value: "tadina.aronjay@gmail.com", href: "mailto:tadina.aronjay@gmail.com" },
-                  { icon: <Phone className="w-5 h-5" />, label: "Phone / Viber", value: "+63929 793 8784", href: "tel:+639297938784" },
-                  { icon: <MessageCircle className="w-5 h-5" />, label: "Telegram", value: "@tadzgraphics", href: "https://t.me/tadzgraphics" },
-                  { icon: <Instagram className="w-5 h-5" />, label: "Instagram", value: "@aeronaurity", href: "https://instagram.com/aeronaurity" },
-                  { icon: <Linkedin className="w-5 h-5" />, label: "LinkedIn", value: "Aron Jay Tadina", href: "https://www.linkedin.com/in/tadinaaronjay/" },
-                  { icon: <ExternalLink className="w-5 h-5" />, label: "Onlinejobs.ph", value: "View Profile", href: "https://v2.onlinejobs.ph/jobseekers/info/2633671" },
+                  { icon: <Mail className="w-4 h-4" />, label: "Email", value: "tadina.aronjay@gmail.com", href: "mailto:tadina.aronjay@gmail.com" },
+                  { icon: <Phone className="w-4 h-4" />, label: "Phone / Viber", value: "+63929 793 8784", href: "tel:+639297938784" },
+                  { icon: <MessageCircle className="w-4 h-4" />, label: "Telegram", value: "@tadzgraphics", href: "https://t.me/tadzgraphics" },
+                  { icon: <Instagram className="w-4 h-4" />, label: "Instagram", value: "@aeronaurity", href: "https://instagram.com/aeronaurity" },
+                  { icon: <Linkedin className="w-4 h-4" />, label: "LinkedIn", value: "Aron Jay Tadina", href: "https://www.linkedin.com/in/tadinaaronjay/" },
                 ].map((contact, i) => (
                   <a key={i} href={contact.href} target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-5 bg-[#111111] border border-white/5 hover:border-primary/50 hover:bg-primary/5 transition-colors group"
+                    className="flex items-center gap-4 p-5 bg-[#111111] border border-white/5 hover:border-[#FF6B00]/40 hover:bg-[#FF6B00]/5 transition-colors group"
                   >
-                    <div className="text-primary">{contact.icon}</div>
+                    <div className="text-[#FF6B00]">{contact.icon}</div>
                     <div>
-                      <div className="text-xs font-black tracking-widest uppercase text-white/30 mb-0.5">{contact.label}</div>
-                      <div className="text-sm font-medium text-white group-hover:text-primary transition-colors">{contact.value}</div>
+                      <div className="text-xs font-black tracking-widest uppercase text-white/25 mb-0.5">{contact.label}</div>
+                      <div className="text-sm font-semibold text-white group-hover:text-[#FF6B00] transition-colors">{contact.value}</div>
                     </div>
                   </a>
                 ))}
               </motion.div>
 
               <motion.div variants={FADE_UP} className="text-center">
-                <a
-                  href="mailto:tadina.aronjay@gmail.com"
-                  className="inline-flex items-center gap-3 bg-primary text-white px-12 py-5 font-black tracking-widest text-sm uppercase hover:bg-orange-500 transition-colors"
-                >
-                  HIRE ME NOW <span className="text-lg">&#8594;</span>
+                <a href="mailto:tadina.aronjay@gmail.com" className="inline-flex items-center gap-3 bg-[#FF6B00] text-white px-12 py-5 font-black tracking-widest text-xs uppercase hover:bg-orange-500 transition-colors">
+                  SEND ME A MESSAGE <ArrowRight className="w-4 h-4" />
                 </a>
               </motion.div>
             </div>
@@ -668,17 +770,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER */}
+      {/* ── FOOTER ── */}
       <footer className="py-8 bg-[#0a0a0a] border-t border-white/5">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/20 text-sm">© 2024 Aron Tadina. All rights reserved.</p>
+          <p className="text-white/20 text-xs font-medium">© 2024 Aron Tadina. All rights reserved.</p>
+          <p className="text-white/20 text-xs">Freelance Graphic Designer · Philippines</p>
           <div className="flex gap-6">
-            <a href="https://instagram.com/aeronaurity" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-primary transition-colors text-sm font-medium">Instagram</a>
-            <a href="https://www.linkedin.com/in/tadinaaronjay/" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-primary transition-colors text-sm font-medium">LinkedIn</a>
-            <a href="mailto:tadina.aronjay@gmail.com" className="text-white/20 hover:text-primary transition-colors text-sm font-medium">Email</a>
+            <a href="https://instagram.com/aeronaurity" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-[#FF6B00] transition-colors text-xs font-bold uppercase tracking-wider">Instagram</a>
+            <a href="https://www.linkedin.com/in/tadinaaronjay/" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-[#FF6B00] transition-colors text-xs font-bold uppercase tracking-wider">LinkedIn</a>
+            <a href="mailto:tadina.aronjay@gmail.com" className="text-white/20 hover:text-[#FF6B00] transition-colors text-xs font-bold uppercase tracking-wider">Email</a>
           </div>
         </div>
       </footer>
+
     </div>
   );
 }
