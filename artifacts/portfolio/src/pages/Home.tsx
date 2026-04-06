@@ -380,49 +380,41 @@ export default function Home() {
       {/* ── FEATURED WORK ── */}
       <section className="py-24 bg-[#0a0a0a]">
         <div className="container mx-auto px-6">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={STAGGER}>
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
-              <div>
-                <motion.p variants={FADE_UP} className="text-[#FF6B00] text-xs font-black tracking-[0.3em] uppercase mb-3">FEATURED WORK</motion.p>
-                <motion.h2 variants={FADE_UP} className="text-3xl md:text-5xl font-black uppercase">
-                  Best Projects
-                </motion.h2>
-              </div>
-              <motion.button variants={FADE_UP} onClick={() => scrollTo('portfolio')} className="flex items-center gap-2 text-xs font-black tracking-widest uppercase text-white/40 hover:text-[#FF6B00] transition-colors flex-shrink-0">
-                SEE ALL WORK <ArrowRight className="w-4 h-4" />
-              </motion.button>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+            <div>
+              <p className="text-[#FF6B00] text-xs font-black tracking-[0.3em] uppercase mb-3">FEATURED WORK</p>
+              <h2 className="text-3xl md:text-5xl font-black uppercase text-white">Best Projects</h2>
             </div>
+            <button onClick={() => scrollTo('portfolio')} className="flex items-center gap-2 text-xs font-black tracking-widest uppercase text-white/40 hover:text-[#FF6B00] transition-colors flex-shrink-0">
+              SEE ALL WORK <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {FEATURED.map((project, i) => {
-                const pi = PROJECTS.indexOf(project);
-                return (
-                  <motion.button
-                    key={i}
-                    variants={FADE_UP}
-                    className="group relative overflow-hidden bg-white/5 text-left"
-                    onClick={() => { scrollTo('portfolio'); }}
-                  >
-                    <div className="aspect-square overflow-hidden">
-                      <img
-                        src={project.featuredImage}
-                        alt={project.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-1">{project.tag}</span>
-                      <span className="text-white text-sm font-bold leading-tight block">{project.title}</span>
-                    </div>
-                    <div className="absolute top-3 right-3 bg-[#FF6B00] p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <ZoomIn className="w-3 h-3 text-white" />
-                    </div>
-                  </motion.button>
-                );
-              })}
-            </div>
-          </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {FEATURED.map((project, i) => (
+              <button
+                key={i}
+                className="group relative overflow-hidden bg-white/5 text-left"
+                onClick={() => scrollTo('portfolio')}
+              >
+                <div className="aspect-square overflow-hidden">
+                  <img
+                    src={project.featuredImage}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-1">{project.tag}</span>
+                  <span className="text-white text-sm font-bold leading-tight block">{project.title}</span>
+                </div>
+                <div className="absolute top-3 right-3 bg-[#FF6B00] p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <ZoomIn className="w-3 h-3 text-white" />
+                </div>
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -440,7 +432,7 @@ export default function Home() {
               </motion.p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 { title: "Social Media Graphics", desc: "Scroll-stopping posts, stories, and templates for Instagram, Facebook, and more — aligned with your brand.", icon: <Share2 className="w-6 h-6" /> },
                 { title: "Logo & Branding Design", desc: "Distinctive logos and brand identities that communicate who you are and scale across all media.", icon: <Layout className="w-6 h-6" /> },
@@ -451,7 +443,7 @@ export default function Home() {
                 { title: "Photo Editing", desc: "Professional retouching, compositing, and layout finishing for polished, presentation-ready results.", icon: <ImageIcon className="w-6 h-6" /> },
                 { title: "Print Design", desc: "ID lanyards, newsletters, publications, and any format that needs clean, print-ready design.", icon: <Smartphone className="w-6 h-6" /> },
               ].map((service, i) => (
-                <motion.div key={i} variants={FADE_UP} className="bg-[#0a0a0a] p-7 group hover:bg-[#FF6B00]/5 transition-colors border-t-2 border-transparent hover:border-[#FF6B00]">
+                <motion.div key={i} variants={FADE_UP} className="bg-[#0a0a0a] border border-white/8 p-7 group hover:bg-[#FF6B00]/5 transition-colors hover:border-[#FF6B00]/40">
                   <div className="text-[#FF6B00] mb-5">{service.icon}</div>
                   <h3 className="text-sm font-black uppercase tracking-wide mb-3 text-white">{service.title}</h3>
                   <p className="text-white/40 text-sm leading-relaxed">{service.desc}</p>
