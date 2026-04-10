@@ -28,7 +28,7 @@ const PROJECTS = [
     approach: "Focused on layout structure, color balance, and print-ready accuracy to produce designs that perform as well in production as they do on screen.",
     tools: ["Adobe Photoshop", "Adobe Illustrator"],
     featured: true,
-    featuredImage: "/projects/jersey_12vO0XoJtAZhZaslhCbeJOLMjwfRYvqb6.jpg",
+    featuredImage: "/projects/jersey_featured.png",
     images: [
       "/projects/jersey_12vO0XoJtAZhZaslhCbeJOLMjwfRYvqb6.jpg",
       "/projects/jersey_1bQN4MJge8xla_XQvGl0vBkoiS3YFR7Cd.jpg",
