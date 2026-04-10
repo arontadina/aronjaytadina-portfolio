@@ -57,7 +57,7 @@ const PROJECTS = [
     approach: "Prioritized clarity, scalability, and symbolic meaning — ensuring each logo works at any size and instantly communicates what the organization stands for.",
     tools: ["Adobe Illustrator", "Adobe Photoshop"],
     featured: true,
-    featuredImage: "/projects/logo_16FUMMNs_iybTxvSNDxvWcdA-Soy6YRcQ.jpg",
+    featuredImage: "/projects/logo_featured.png",
     images: [
       "/projects/logo_16FUMMNs_iybTxvSNDxvWcdA-Soy6YRcQ.jpg",
       "/projects/logo_17k_yARM1BmvlnQb0dp3Um_7s1PRY1RzD.jpg",
