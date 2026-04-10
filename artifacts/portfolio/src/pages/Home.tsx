@@ -142,7 +142,7 @@ const PROJECTS = [
     approach: "Balanced visual appeal with clear messaging — designing for both aesthetic impact and fast readability in a fast-scrolling feed environment.",
     tools: ["Adobe Photoshop", "Canva", "Adobe Illustrator"],
     featured: true,
-    featuredImage: "/projects/social_14GPshanLo7HOoIPhp5dzMccZ1Ba_3fc0.jpg",
+    featuredImage: "/projects/social_featured.png",
     images: [
       "/projects/social_14GPshanLo7HOoIPhp5dzMccZ1Ba_3fc0.jpg",
       "/projects/social_1OmszSAmSkCPLU297CeqOBe9AbRmndUId.jpg",
