@@ -86,7 +86,7 @@ const PROJECTS = [
     approach: "Applied strong visual hierarchy and clear information structure to ensure that key messages are understood at a glance — critical for high-traffic public display.",
     tools: ["Adobe Photoshop", "Adobe Illustrator"],
     featured: true,
-    featuredImage: "/projects/campaign_1ArUTSOmSwikx9HaYYr61AyPYaDlO2DDE.jpg",
+    featuredImage: "/projects/campaign_featured.png",
     images: [
       "/projects/campaign_11UOCUJpeHYtuO5ce-DVlIN2M_R77M5Jt.jpg",
       "/projects/campaign_133jNvoPTAsJWl6fX8aOMGuspeUxPM03Z.jpg",
