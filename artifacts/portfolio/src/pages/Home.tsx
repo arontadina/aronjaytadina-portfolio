@@ -739,7 +739,7 @@ export default function Home() {
                   { icon: <MessageCircle className="w-4 h-4" />, label: "Telegram", value: "@tadzgraphics", href: "https://t.me/tadzgraphics" },
                   { icon: <Instagram className="w-4 h-4" />, label: "Instagram", value: "@aeronaurity", href: "https://instagram.com/aeronaurity" },
                   { icon: <Linkedin className="w-4 h-4" />, label: "LinkedIn", value: "Aron Jay Tadina", href: "https://www.linkedin.com/in/tadinaaronjay/" },
-                  { icon: <Globe className="w-4 h-4" />, label: "OnlineJobs.ph", value: "View My Profile", href: "https://www.onlinejobs.ph/jobseekers/info/4197951" },
+                  { icon: <Globe className="w-4 h-4" />, label: "OnlineJobs.ph", value: "View My Profile", href: "https://v2.onlinejobs.ph/jobseekers/info/2633671" },
                 ].map((contact, i) => (
                   <a key={i} href={contact.href} target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-4 p-5 bg-[#111111] border border-white/5 hover:border-[#FF6B00]/40 hover:bg-[#FF6B00]/5 transition-colors group"
