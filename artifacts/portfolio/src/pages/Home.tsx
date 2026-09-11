@@ -527,33 +527,34 @@ export default function Home() {
                   className="border border-white/5 bg-[#0a0a0a]"
                 >
                   {/* Project header bar */}
-                  <div className="flex flex-col items-start gap-2 p-6 text-left border-b border-white/5">
+                  <div className="flex flex-col md:flex-row md:items-center gap-3 p-6 border-b border-white/5">
                     <span className="text-[#FF6B00] text-xs font-black tracking-[0.25em] uppercase">{project.tag}</span>
-                    <h3 className="text-lg md:text-xl font-black uppercase text-white">{project.title}</h3>
+                    <span className="hidden md:block text-white/20">·</span>
+                    <h3 className="text-lg md:text-xl font-black uppercase text-[#FF6B00]">{project.title}</h3>
                   </div>
 
-                  <div className="p-6 space-y-10">
-                    {/* Left-aligned case study details */}
-                    <div className="max-w-4xl mx-auto space-y-7 text-left">
+                  <div className="p-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    {/* Left: case study details */}
+                    <div className="lg:col-span-1 space-y-6 text-left">
                       <div>
                         <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">Built for</span>
-                        <p className="text-white/70 text-sm md:text-base leading-relaxed">{project.client}</p>
+                        <p className="text-white/55 text-sm leading-relaxed">{project.client}</p>
                       </div>
                       <div>
                         <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">The brief</span>
-                        <p className="text-white/70 text-sm md:text-base leading-relaxed">{project.goal}</p>
+                        <p className="text-white/55 text-sm leading-relaxed">{project.goal}</p>
                       </div>
                       <div>
                         <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">What I designed</span>
-                        <p className="text-white/70 text-sm md:text-base leading-relaxed">{project.solution}</p>
+                        <p className="text-white/55 text-sm leading-relaxed">{project.solution}</p>
                       </div>
                       <div>
                         <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">The impact</span>
-                        <p className="text-white/70 text-sm md:text-base leading-relaxed">{project.result}</p>
+                        <p className="text-white/55 text-sm leading-relaxed">{project.result}</p>
                       </div>
                       <div>
                         <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">How I approached it</span>
-                        <p className="text-white/70 text-sm md:text-base leading-relaxed">{project.approach}</p>
+                        <p className="text-white/55 text-sm leading-relaxed">{project.approach}</p>
                       </div>
                       <div>
                         <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">Tools</span>
@@ -565,8 +566,8 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* Centered image grid */}
-                    <div className="max-w-5xl mx-auto w-full">
+                    {/* Right: image grid */}
+                    <div className="lg:col-span-2">
                       <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                         {project.images.map((img, ii) => (
                           <motion.button
