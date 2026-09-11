@@ -527,15 +527,14 @@ export default function Home() {
                   className="border border-white/5 bg-[#0a0a0a]"
                 >
                   {/* Project header bar */}
-                  <div className="flex flex-col md:flex-row md:items-center gap-3 p-6 border-b border-white/5">
+                  <div className="flex flex-col items-center justify-center gap-3 p-6 text-center border-b border-white/5">
                     <span className="text-[#FF6B00] text-xs font-black tracking-[0.25em] uppercase">{project.tag}</span>
-                    <span className="hidden md:block text-white/20">·</span>
                     <h3 className="text-lg md:text-xl font-black uppercase text-white">{project.title}</h3>
                   </div>
 
-                  <div className="p-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    {/* Left: case study details */}
-                    <div className="lg:col-span-1 space-y-6">
+                  <div className="p-6 space-y-10">
+                    {/* Centered case study details */}
+                    <div className="max-w-3xl mx-auto space-y-6 text-center">
                       <div>
                         <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">Client</span>
                         <p className="text-white/55 text-sm leading-relaxed">{project.client}</p>
@@ -558,7 +557,7 @@ export default function Home() {
                       </div>
                       <div>
                         <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">Tools Used</span>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap justify-center gap-2">
                           {project.tools.map((tool, ti) => (
                             <span key={ti} className="text-xs font-bold text-white/60 bg-white/5 border border-white/10 px-2 py-1">{tool}</span>
                           ))}
@@ -566,8 +565,8 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* Right: image grid */}
-                    <div className="lg:col-span-2">
+                    {/* Centered image grid */}
+                    <div className="max-w-5xl mx-auto w-full">
                       <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                         {project.images.map((img, ii) => (
                           <motion.button
