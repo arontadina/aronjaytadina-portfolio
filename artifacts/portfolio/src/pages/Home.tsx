@@ -21,11 +21,11 @@ const PROJECTS = [
   {
     tag: "Sublimation Design",
     title: "Full Sublimation Jersey Designs",
-    client: "Students, school organizations, companies, and printing service owners",
-    goal: "Design visually dynamic full-sublimation jerseys that reflect team identity, professionalism, and brand personality while meeting print-ready production standards.",
-    solution: "Developed custom sublimation layouts with strong structural composition, bold color combinations, and detailed graphics. Each design was built with print accuracy in mind — ensuring color consistency and edge-to-edge quality for large-format production.",
-    result: "Delivered standout jersey designs that elevate team presence, reflect brand identity, and are ready for immediate production.",
-    approach: "Focused on layout structure, color balance, and print-ready accuracy to produce designs that perform as well in production as they do on screen.",
+    client: "Teams, schools, organizations, companies, and print shops",
+    goal: "Create a jersey that feels like the team before the game even starts — bold, unified, and impossible to overlook.",
+    solution: "Built custom sublimation layouts with strong color, movement, and team personality. Every graphic was composed to work beautifully from the first screen preview to the final printed jersey.",
+    result: "High-energy jerseys that make teams look organized, confident, and ready to show up together.",
+    approach: "I balanced visual impact with production accuracy, so the design looks exciting without losing clarity when it is printed edge to edge.",
     tools: ["Adobe Photoshop", "Adobe Illustrator"],
     featured: true,
     featuredImage: "/projects/jersey_featured.png",
@@ -50,11 +50,11 @@ const PROJECTS = [
   {
     tag: "Branding",
     title: "Logo & Identity Design",
-    client: "School organizations, intramural teams, and concept brands",
-    goal: "Create meaningful, scalable logo designs that communicate identity, unity, and purpose — ready for application across print and digital formats.",
-    solution: "Developed custom logo layouts combining clean typography, symbolic graphic elements, and versatile design styles. Each mark was built to be adaptable — working equally well on jerseys, tarpaulins, social media, and official documents.",
-    result: "Delivered versatile, visually distinct logos that strengthen recognition and hold up across all media.",
-    approach: "Prioritized clarity, scalability, and symbolic meaning — ensuring each logo works at any size and instantly communicates what the organization stands for.",
+    client: "Organizations, teams, student groups, and growing brands",
+    goal: "Turn an idea, community, or mission into a logo people can recognize and remember.",
+    solution: "Combined meaningful symbols, confident typography, and flexible layouts to create identity systems that feel personal without being difficult to use.",
+    result: "Distinctive logos that stay clear on a profile picture, stand out on a jersey, and remain strong across every brand touchpoint.",
+    approach: "I focused on clarity and meaning first, then built each mark to scale smoothly from small digital uses to large-format print.",
     tools: ["Adobe Illustrator", "Adobe Photoshop"],
     featured: true,
     featuredImage: "/projects/logo_featured.png",
@@ -79,11 +79,11 @@ const PROJECTS = [
   {
     tag: "Print & Marketing",
     title: "Campaign Poster Designs",
-    client: "Political candidates, campaign teams, and advocacy groups",
-    goal: "Produce persuasive, high-impact campaign visuals that communicate a candidate's message clearly and connect with voters across different demographics.",
-    solution: "Designed strategic poster layouts with strong typographic hierarchy, compelling imagery, and structured information flow. Every element was positioned to guide the viewer's eye and reinforce the candidate's identity and platform.",
-    result: "Produced attention-grabbing campaign materials that strengthen candidate visibility and create a consistent visual presence across print and digital formats.",
-    approach: "Applied strong visual hierarchy and clear information structure to ensure that key messages are understood at a glance — critical for high-traffic public display.",
+    client: "Candidates, campaign teams, advocacy groups, and public initiatives",
+    goal: "Make the message clear, memorable, and impossible to miss in a busy public space.",
+    solution: "Created bold poster compositions that lead with the candidate, sharpen the message, and make key details easy to understand at a glance.",
+    result: "Campaign visuals with stronger presence, clearer communication, and a consistent look across print and digital materials.",
+    approach: "I used hierarchy, contrast, and purposeful spacing to make every poster work fast — even when viewers only have a few seconds to look.",
     tools: ["Adobe Photoshop", "Adobe Illustrator"],
     featured: true,
     featuredImage: "/projects/campaign_featured.png",
@@ -107,11 +107,11 @@ const PROJECTS = [
   {
     tag: "Merchandise",
     title: "ID Lanyard Designs",
-    client: "Educational institutions, corporate offices, and organizations",
-    goal: "Create professional, branded lanyard designs that reinforce organizational identity and meet functional print production requirements.",
-    solution: "Designed custom lanyard layouts incorporating brand colors, logos, and clean typography. Each design was structured to ensure readability at small scale and visual consistency across all production sizes.",
-    result: "Delivered polished, print-ready lanyard designs that strengthen organizational branding and present a professional image.",
-    approach: "Focused on readability, brand consistency, and production precision — ensuring the designs translate cleanly at the small scale required for lanyard printing.",
+    client: "Schools, offices, institutions, and organizations",
+    goal: "Make everyday credentials feel like a natural part of the brand.",
+    solution: "Translated logos, colors, and type into compact lanyard layouts that stay readable, polished, and recognizable in motion.",
+    result: "Professional lanyards that turn a practical item into a consistent brand detail.",
+    approach: "I designed for small-scale readability and repeatable production, keeping every detail clean from front to finish.",
     tools: ["Adobe Illustrator", "Adobe Photoshop"],
     featured: false,
     featuredImage: "/projects/lanyard_10l7t9Ji6xsGCyjCGlwuaydvsDagFmh9m.jpg",
@@ -135,11 +135,11 @@ const PROJECTS = [
   {
     tag: "Social Media",
     title: "Social Media Graphics",
-    client: "Educational institutions, corporate brands, and independent publications",
-    goal: "Produce engaging, visually consistent social media content that strengthens brand presence and communicates key messages effectively across platforms.",
-    solution: "Designed cohesive graphic layouts using brand-aligned color palettes, modern typography, and structured visual compositions — tailored for Instagram, Facebook, and other digital platforms.",
-    result: "Produced high-quality, scroll-stopping content that increases audience engagement and reinforces brand recognition.",
-    approach: "Balanced visual appeal with clear messaging — designing for both aesthetic impact and fast readability in a fast-scrolling feed environment.",
+    client: "Brands, schools, publications, and digital-first organizations",
+    goal: "Give every post a reason to stop the scroll and a message worth remembering.",
+    solution: "Created cohesive social graphics with strong hooks, brand-led visuals, and layouts built for quick mobile reading.",
+    result: "A more recognizable feed with content that feels consistent, current, and ready to be shared.",
+    approach: "I paired visual energy with clear messaging, so the design catches attention without making the audience work for the point.",
     tools: ["Adobe Photoshop", "Canva", "Adobe Illustrator"],
     featured: true,
     featuredImage: "/projects/social_featured.png",
@@ -156,11 +156,11 @@ const PROJECTS = [
   {
     tag: "Event Design",
     title: "Tarpaulin & Event Layout Design",
-    client: "Board passers, graduating students, schools, and event organizers",
-    goal: "Design vibrant, high-resolution tarpaulin layouts that celebrate milestones and create a strong visual presence at events.",
-    solution: "Created large-format layouts with balanced composition, bold typography, and personalized elements. Each design was built at print-ready resolution to ensure sharpness and clarity at full tarpaulin size.",
-    result: "Delivered professional tarpaulin designs that make events memorable and highlight achievements with visual impact.",
-    approach: "Applied large-format design principles — ensuring every element remains clear and impactful at scale, with particular attention to resolution, spacing, and readability from a distance.",
+    client: "Schools, event organizers, graduates, and milestone celebrations",
+    goal: "Make the moment feel as important as it is — from the stage to the final photo.",
+    solution: "Designed vibrant large-format layouts with bold type, personal details, and a clear visual focal point that reads from a distance.",
+    result: "Event graphics that celebrate achievements, photograph well, and give the occasion a stronger visual identity.",
+    approach: "I planned every layout for real-world viewing, balancing scale, spacing, and print clarity so the design holds up in the room and in the camera roll.",
     tools: ["Adobe Photoshop", "Adobe Illustrator"],
     featured: false,
     featuredImage: "/projects/tarp_14Cfku3BQluGb6ZQZtaBGzy5O02w9-Zfm.jpg",
@@ -527,37 +527,37 @@ export default function Home() {
                   className="border border-white/5 bg-[#0a0a0a]"
                 >
                   {/* Project header bar */}
-                  <div className="flex flex-col items-center justify-center gap-3 p-6 text-center border-b border-white/5">
+                  <div className="flex flex-col items-start gap-2 p-6 text-left border-b border-white/5">
                     <span className="text-[#FF6B00] text-xs font-black tracking-[0.25em] uppercase">{project.tag}</span>
                     <h3 className="text-lg md:text-xl font-black uppercase text-white">{project.title}</h3>
                   </div>
 
                   <div className="p-6 space-y-10">
-                    {/* Centered case study details */}
-                    <div className="max-w-3xl mx-auto space-y-6 text-center">
+                    {/* Left-aligned case study details */}
+                    <div className="max-w-4xl mx-auto space-y-7 text-left">
                       <div>
-                        <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">Client</span>
-                        <p className="text-white/55 text-sm leading-relaxed">{project.client}</p>
+                        <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">Built for</span>
+                        <p className="text-white/70 text-sm md:text-base leading-relaxed">{project.client}</p>
                       </div>
                       <div>
-                        <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">Goal</span>
-                        <p className="text-white/55 text-sm leading-relaxed">{project.goal}</p>
+                        <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">The brief</span>
+                        <p className="text-white/70 text-sm md:text-base leading-relaxed">{project.goal}</p>
                       </div>
                       <div>
-                        <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">Solution</span>
-                        <p className="text-white/55 text-sm leading-relaxed">{project.solution}</p>
+                        <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">What I designed</span>
+                        <p className="text-white/70 text-sm md:text-base leading-relaxed">{project.solution}</p>
                       </div>
                       <div>
-                        <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">Result</span>
-                        <p className="text-white/55 text-sm leading-relaxed">{project.result}</p>
+                        <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">The impact</span>
+                        <p className="text-white/70 text-sm md:text-base leading-relaxed">{project.result}</p>
                       </div>
                       <div>
-                        <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">Design Approach</span>
-                        <p className="text-white/55 text-sm leading-relaxed">{project.approach}</p>
+                        <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">How I approached it</span>
+                        <p className="text-white/70 text-sm md:text-base leading-relaxed">{project.approach}</p>
                       </div>
                       <div>
-                        <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">Tools Used</span>
-                        <div className="flex flex-wrap justify-center gap-2">
+                        <span className="text-[#FF6B00] text-xs font-black tracking-widest uppercase block mb-2">Tools</span>
+                        <div className="flex flex-wrap gap-2">
                           {project.tools.map((tool, ti) => (
                             <span key={ti} className="text-xs font-bold text-white/60 bg-white/5 border border-white/10 px-2 py-1">{tool}</span>
                           ))}
